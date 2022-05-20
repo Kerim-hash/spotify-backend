@@ -15,10 +15,10 @@ import {
 } from '@nestjs/common';
 import { UserDec } from './decorators/user.decorator';
 import { UserService } from './user.service';
-import { Auth } from 'src/auth/decorators/Auth.decorator';
 import { UpdateDto } from './dto/update.dto';
 import { IdValidationPipe } from 'src/pipes/id.validation.pipe';
 import { FileFieldsInterceptor } from '@nestjs/platform-express';
+import { Auth } from 'src/auth/decorators/auth.decorator';
 
 @Controller('users')
 export class UserController {
