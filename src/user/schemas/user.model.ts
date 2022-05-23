@@ -1,5 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
+import { Album } from 'src/album/schemas/album.schemas';
 import { Track } from 'src/track/schemas/track.schemas';
 
 export type UserDocument = User & Document;
@@ -27,6 +28,9 @@ export class User {
 
   @Prop()
   tracks: Track[];
+
+  @Prop()
+  albums: Album[];
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);

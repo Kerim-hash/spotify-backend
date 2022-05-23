@@ -1,8 +1,15 @@
+import { IsString } from 'class-validator';
 import { ObjectId } from 'mongoose';
 
 export class CreateTrackDto {
-  readonly name;
-  readonly artist;
-  readonly text;
-  readonly albumId: ObjectId;
+  @IsString()
+  name: string;
+
+  @IsString()
+  artist: string;
+
+  @IsString()
+  text: string;
+
+  albumId?: ObjectId;
 }

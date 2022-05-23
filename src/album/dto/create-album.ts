@@ -1,4 +1,12 @@
+import { IsString } from 'class-validator';
+import { ObjectId } from 'mongoose';
+
 export class CreateAlbumDto {
-  readonly name: string;
-  readonly artist: string;
+  @IsString()
+  name: string;
+
+  @IsString()
+  artist: string;
+
+  userId?: ObjectId;
 }
