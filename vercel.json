@@ -1,7 +1,6 @@
 {
     "version": 2,
     "env": {
-        "PORT": "@vercel_port",
         "MONGO_URI": "@shop_api_mongo_uri"
     },
     "builds": [
