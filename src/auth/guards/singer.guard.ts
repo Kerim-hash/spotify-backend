@@ -8,7 +8,7 @@ import { Reflector } from '@nestjs/core';
 import { User } from 'src/user/schemas/user.model';
 
 @Injectable()
-export class OnlyAdminGuard implements CanActivate {
+export class OnlySingerGuard implements CanActivate {
   constructor(private reflector: Reflector) {}
   canActivate(context: ExecutionContext): boolean {
     const request = context.switchToHttp().getRequest<{ user: User }>();

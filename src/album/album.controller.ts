@@ -9,6 +9,7 @@ import {
 } from '@nestjs/common';
 import { FileFieldsInterceptor } from '@nestjs/platform-express';
 import { ObjectId } from 'mongoose';
+import { Auth } from 'src/auth/decorators/auth.decorator';
 import { AlbumService } from './album.service';
 import { CreateAlbumDto } from './dto/create-album';
 
@@ -17,6 +18,7 @@ export class AlbumController {
   constructor(private albumService: AlbumService) {}
 
   @Post()
+  @Auth('singer')
   @UseInterceptors(FileFieldsInterceptor([{ name: 'photo', maxCount: 1 }]))
   create(@UploadedFiles() files, @Body() dto: CreateAlbumDto) {
     const { photo } = files;
