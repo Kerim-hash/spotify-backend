@@ -13,7 +13,7 @@ import { UserModule } from './user/user.module';
       rootPath: path.resolve(__dirname, 'static'),
     }),
     MongooseModule.forRoot(
-      'mongodb+srv://kerim:aslkzxmn10@cluster0.twhcf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+      process.env.MONGO_URI
     ),
     AlbumModule,
     TrackModule,
