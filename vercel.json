@@ -1,8 +1,8 @@
 {
     "version": 2,
     "env": {
-        "PORT": "5000",
-        "MONGO_URI": "mongodb+srv://kerim:aslkzxmn10@cluster0.twhcf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+        "PORT": "@vercel_port",
+        "MONGO_URI": "@shop_api_mongo_uri"
     },
     "builds": [
         {
